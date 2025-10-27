@@ -1,3 +1,5 @@
+// src/components/Hero.tsx
+
 import { motion } from "framer-motion";
 
 const Hero = () => {
@@ -5,6 +7,8 @@ const Hero = () => {
     <section className="min-h-screen pt-20 bg-gradient-hero flex items-center justify-center">
       <div className="container mx-auto px-4 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
+          
+          {/* Coluna da esquerda com o texto e botões (mantida) */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -29,24 +33,15 @@ const Hero = () => {
             </div>
           </motion.div>
 
+          {/* Coluna da direita (espaço preservado mas vazio) */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex items-center justify-center"
           >
-            {/* 3D Element Placeholder - Integrate @react-three/fiber or @splinetool/react-spline here */}
-            <div className="w-full h-[500px] rounded-2xl bg-gradient-brand flex items-center justify-center shadow-hover">
-              <div className="text-center space-y-4">
-                <h2 className="text-6xl font-bold text-white">SORRIA</h2>
-                <h3 className="text-4xl font-semibold text-white/90">ODONTO</h3>
-                <p className="text-white/80 text-sm">3D Element Placeholder</p>
-                <p className="text-white/60 text-xs max-w-xs mx-auto">
-                  Integrate @react-three/fiber or @splinetool/react-spline for interactive 3D effect
-                </p>
-              </div>
-            </div>
+            {/* Este espaço está agora vazio e pronto para uso futuro */}
           </motion.div>
+
         </div>
       </div>
     </section>
